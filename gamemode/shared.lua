@@ -25,3 +25,7 @@ function GM:CreateTeams()
 	team.SetUp(TEAM_BLUE, "Blue Team", Color(0,0,255,255))
 	team.SetUp(TEAM_GRIF, "Grif", Color(255,120,15,255))
 end
+
+function GM:PlayerInitialSpawn(ply)
+	
+end
