@@ -1,0 +1,12 @@
+"grifball"
+{
+	"base"		"base"
+	"title"		"Grifball"
+	"maps"		"^gb_|^gbl_"
+	"menusystem"	"1"
+	
+	"settings"
+	{
+		
+	}
+}
