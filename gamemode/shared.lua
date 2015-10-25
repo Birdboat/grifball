@@ -27,5 +27,22 @@ function GM:CreateTeams()
 end
 
 function GM:PlayerInitialSpawn(ply)
-	
+	ply:Give("weapon_pistol")
+	ply:GiveAmmo(999,"Pistol",true)
+end
+
+function GM:PlayerSpawn(ply)
+	ply:SetupHands(ply)
+end
+
+function GM:PlayerSetHandsModel( ply, ent )
+
+	local simplemodel = player_manager.TranslateToPlayerModelName( ply:GetModel() )
+	local info = player_manager.TranslatePlayerHands( simplemodel )
+	if ( info ) then
+		ent:SetModel( info.model )
+		ent:SetSkin( info.skin )
+		ent:SetBodyGroups( info.body )
+	end
+
 end
